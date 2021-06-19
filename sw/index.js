@@ -1,11 +1,19 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import hbs from 'express-hbs';
-import path from 'path';
-import cookieParser from 'cookie-parser';
-import {routes} from './routes/router.js';
-import { registerHelpers } from './utils/handlebar-util.js';
-import { overrideMiddleware } from './utils/method-override.js';
+//import express from 'express';
+const express = require("express");
+//import bodyParser from 'body-parser';
+const bodyParser = require("body-parser");
+//import hbs from 'express-hbs';
+const hbs = require("express-hbs");
+//import path from 'path';
+const path = require("path");
+//import cookieParser from 'cookie-parser';
+const cookieParser = require("cookie-parser");
+//import {routes} from './routes/router.js';
+const routes = require("./routes/router.js");
+//import { registerHelpers } from './utils/handlebar-util.js';
+const registerHelpers = require("./utils/handlebar-util.js");
+//import { overrideMiddleware } from './utils/method-override.js';
+const overrideMiddleware = require("./utils/method-override.js");
 
 const app = express();
 app.engine('hbs', hbs.express4());
