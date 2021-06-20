@@ -29,10 +29,10 @@ app.use(routes);
 app.use(express.static(path.resolve('public')));
 
 
-const hostname = '127.0.0.1';
-//const hostname ='80.209.253.34';
-//const port = 6082
-const port = 3001;
+//const hostname = '127.0.0.1';
+const hostname ='80.209.253.34';
+const port = 6082
+//const port = 3001;
 app.listen(port, hostname, () => {
     // eslint-disable-next-line no-console
     console.log(`Server running at http://${hostname}:${port}/`);
